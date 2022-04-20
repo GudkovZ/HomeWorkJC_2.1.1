@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
-    Calculator sut;
+    Calculator sut = new Calculator();
 
     @BeforeAll
     public static void startedAll() {
@@ -13,7 +13,6 @@ public class CalculatorTest {
     @BeforeEach
     public void started() {
         System.out.println("This test started!");
-        sut = new Calculator();
     }
 
     @AfterAll
@@ -28,7 +27,9 @@ public class CalculatorTest {
 
     @Test
     public void additionTest() {
-        double a = 37, b = 11, expected = 48;
+        double a = 37;
+        double b = 11;
+        double expected = 48;
 
         double result = sut.addition(a, b);
 
@@ -37,7 +38,9 @@ public class CalculatorTest {
 
     @Test
     public void subtractionTest() {
-        double a = 37, b = 11, expected = 26;
+        double a = 37;
+        double b = 11;
+        double expected = 26;
 
         double result = sut.subtraction(a, b);
 
@@ -46,7 +49,9 @@ public class CalculatorTest {
 
     @Test
     public void multiplicationTest() {
-        double a = 37, b = 11, expected = 407;
+        double a = 37;
+        double b = 11;
+        double expected = 407;
 
         double result = sut.multiplication(a, b);
 
@@ -55,7 +60,9 @@ public class CalculatorTest {
 
     @Test
     public void divisionTest() {
-        int a = 37, b = 11, expected = 3;
+        int a = 37;
+        int b = 11;
+        int expected = 3;
 
         int result = sut.division(a, b);
 
